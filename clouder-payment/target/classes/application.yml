@@ -1,0 +1,22 @@
+
+# 微服务名称
+spring:
+  application:
+    name: cloud-payment-service
+  # 当前数据源类型
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    # MySQL驱动包
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_pay?serverTimezone=UTC
+    username: root
+    password: lsd123
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  # 所有Entity别名类所在包
+  type-aliases-package: com.bigdata.pojo
+# 端口
+server:
+  port: 8081
+
